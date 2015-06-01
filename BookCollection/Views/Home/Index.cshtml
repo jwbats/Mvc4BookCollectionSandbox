@@ -1,0 +1,33 @@
+﻿@model List<BookCollection.Models.Book>
+
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Index</title>
+</head>
+<body>
+	<div>
+		<table>
+			<tr><th>Author Name</th><th>Title</th><th>Publisher</th><th>Publish Date</th></tr>
+			@{
+				foreach (var book in Model)
+				{
+					<tr>
+						<td>@book.AuthorName</td>
+						<td>@book.Title</td>
+						<td>@book.Publisher</td>
+						<td>@book.PublishDate.ToShortDateString()</td>
+					</tr>
+				}	   
+			}
+		</table>
+	</div>
+	<div>@Html.ActionLink("Add New Book", "AddBook")</div>
+</body>
+</html>
