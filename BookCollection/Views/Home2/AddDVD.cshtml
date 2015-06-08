@@ -1,27 +1,14 @@
 ﻿@model BookCollection.Models.DVD
 
-@{
-	Layout = null;
-}
+<div>
+	@using (Html.BeginForm())
+	{
+		@Html.ValidationSummary();
 
-<!DOCTYPE html>
+		<p>Producer Name: @Html.TextBoxFor(x => x.ProducerName)</p>
+		<p>Title: @Html.TextBoxFor(x => x.Title)</p>
+		<p>Publish Date: @Html.EditorFor(x => x.PublishDate)</p> <!-- datetime picker only works on chrome -->
 
-<html>
-<head>
-	<title>AddBook</title>
-</head>
-<body>
-	<div>
-		@using (Html.BeginForm())
-		{
-			@Html.ValidationSummary();
-
-			<p>Author Name: @Html.TextBoxFor(x => x.ProducerName)</p>
-			<p>Title: @Html.TextBoxFor(x => x.Title)</p>
-			<p>Publish Date: @Html.EditorFor(x => x.PublishDate)</p> <!-- datetime picker only works on chrome -->
-
-			<input type="submit" name="Add DVD" />
-		}
-	</div>
-</body>
-</html>
+		<input type="submit" name="Add DVD" />
+	}
+</div>
