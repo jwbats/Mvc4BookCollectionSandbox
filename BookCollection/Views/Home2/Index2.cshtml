@@ -1,0 +1,32 @@
+﻿@model List<BookCollection.Models.DVD>
+
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+	<div>
+		<table>
+			<tr><th>Producer Name</th><th>Title</th><th>Publish Date</th></tr>
+			@{
+				foreach (var dvd in Model)
+				{
+					<tr>
+						<td>@dvd.ProducerName</td>
+						<td>@dvd.Title</td>
+						<td>@dvd.PublishDate.ToShortDateString()</td>
+					</tr>
+				}
+			}
+		</table>
+	</div>
+	<div>@Html.ActionLink("Add New DVD", "AddDVD")</div>
+</body>
+</html>
+

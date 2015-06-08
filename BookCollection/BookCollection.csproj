@@ -112,11 +112,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Home2Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\DVD.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +146,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\AddBook.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home2\Index2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home2\AddDVD.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
