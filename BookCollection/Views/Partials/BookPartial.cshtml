@@ -1,0 +1,23 @@
+﻿@model BookCollection.Models.Book
+
+<p>I am a book partial!</p>
+
+<p><strong>Model</strong></p>
+
+<ul>
+	<li>@Model.Title</li>
+	<li>@Model.AuthorName</li>
+	<li>@Model.Publisher</li>
+	<li>@Model.PublishDate.ToShortDateString()</li>
+</ul>
+
+<p><strong>ViewDataDictionary</strong></p>
+
+<ul>
+	@{
+		foreach (var key in ViewData.Keys)
+		{
+			<li>@key : @ViewData[key]</li>
+		}
+	}
+</ul>
