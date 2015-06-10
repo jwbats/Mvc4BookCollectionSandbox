@@ -11,6 +11,12 @@
 <body>
 	<div id="bodyContainer">
 		@RenderBody()
-	</div>	
+	</div>
+
+	@RenderSection("partial", false)
+
+	<div id="footerContainer">
+		@RenderSection("footer", false)
+	</div>
 </body>
 </html>

@@ -176,6 +176,8 @@
     <Content Include="Scripts\jquery-1.11.3.min.map" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Partials\BookPartial.cshtml" />
+    <Content Include="Views\Partials\DVDPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

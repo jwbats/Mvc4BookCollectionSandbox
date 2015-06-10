@@ -12,3 +12,28 @@
 		<input type="submit" name="Add DVD" class="btn btn-primary btn-large" />
 	}
 </div>
+
+@section partial {
+	<div id="partialContainer">
+		@{
+			var dvd = new BookCollection.Models.DVD()
+			{
+				Title        = "Partial title from AddDVD.cshtml.",
+				ProducerName = "Partial producer from AddDVD.csthml.",
+				PublishDate  = DateTime.Now
+			};
+
+			var dictionary = new ViewDataDictionary {
+				{ "key1", "AddDVD.cshtml value 1" },
+				{ "key2", "AddDVD.cshtml value 2" },
+				{ "key3", "AddDVD.cshtml value 3" }
+			};
+
+			Html.RenderPartial("~/Views/Partials/DVDPartial.cshtml", dvd, dictionary);
+		}
+	</div>
+}
+
+@section footer {
+	AddDVD.cshtml footer (section rendered).
+}

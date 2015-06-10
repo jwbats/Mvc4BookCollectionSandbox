@@ -1,0 +1,22 @@
+﻿@model BookCollection.Models.DVD
+
+<p>I am a DVD partial!</p>
+
+<p><strong>Model</strong></p>
+
+<ul>
+	<li>@Model.Title</li>
+	<li>@Model.ProducerName</li>
+	<li>@Model.PublishDate.ToShortDateString()</li>
+</ul>
+
+<p><strong>ViewDataDictionary</strong></p>
+
+<ul>
+	@{
+		foreach (var key in ViewData.Keys)
+		{
+			<li>@key : @ViewData[key]</li>
+		}
+	}
+</ul>

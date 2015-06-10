@@ -18,3 +18,28 @@
 </div>
 <br/>
 <div>@Html.ActionLink("Add New Book", "AddBook")</div>
+
+@section partial {
+	<div id="partialContainer">
+	@{
+		var book = new BookCollection.Models.Book() {
+			Title       = "Partial title from Index.cshtml.",
+			AuthorName  = "Partial author from Index.cshtml.",
+			Publisher   = "Partial publisher from index.cshtml.",
+			PublishDate = DateTime.Now
+		};
+		
+		var dictionary = new ViewDataDictionary {
+			{ "key1", "Index.cshtml value 1" },
+			{ "key2", "Index.cshtml value 2" },
+			{ "key3", "Index.cshtml value 3" }
+		};
+
+		Html.RenderPartial("~/Views/Partials/BookPartial.cshtml", book, dictionary);
+	}
+	</div>
+}
+
+@section footer {
+	Index.cshtml footer (section rendered).
+}
