@@ -1,11 +1,7 @@
 ﻿@model System.Collections.ObjectModel.ObservableCollection<BookCollection.Models.Product>
 
 @{
-	BookCollection.Models.Product product = new BookCollection.Models.Product();
-}
-
-@{
-	var grid = new WebGrid(Model, canPage: true, rowsPerPage: 5, selectionFieldName: "selectedRow", ajaxUpdateContainerId: "gridContent");
+	var grid = new WebGrid(Model, canPage: true, rowsPerPage: 5, selectionFieldName: "selectedRow");
 	grid.Pager(WebGridPagerModes.NextPrevious);
 }
 
@@ -25,7 +21,7 @@
 
 	@if (grid.HasSelection)
 	{
-		product = (BookCollection.Models.Product)grid.Rows[grid.SelectedIndex].Value;
+		var product = (BookCollection.Models.Product)grid.Rows[grid.SelectedIndex].Value;
 		<b>Id</b> @product.Id<br />
 		<b>Name</b>  @product.Name<br />
 		<b>Description</b> @product.Description<br />
