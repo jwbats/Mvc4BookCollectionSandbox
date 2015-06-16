@@ -15,10 +15,16 @@ namespace BookCollection
 
 			bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/bootstrap.js"));
 
+			bundles.Add(new ScriptBundle("~/bundles/datatables").Include("~/Scripts/jquery.dataTables.min.js"));
+
+			bundles.Add(new ScriptBundle("~/bundles/home4index").Include("~/Scripts/home4index.js"));
+
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 				"~/Content/bootstrap.css",
-				"~/Content/style.css"
+				"~/Content/style.css",
+				"~/Content/dataTables/demo_table.css"
 			));
+
 		}
 	}
 }

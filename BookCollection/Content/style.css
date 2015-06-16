@@ -27,7 +27,6 @@ th, td {
 
 
 
-
 .webGrid {
 	margin: 4px;
 	border-collapse: collapse;
@@ -61,4 +60,11 @@ th, td {
 
 .select {
 	background-color: #389DF5;
+}
+
+
+
+
+#datatablesContainer {
+	padding-bottom:20px;
 }
