@@ -98,8 +98,6 @@ namespace BookCollection.Controllers
 
 			IEnumerable<Company> displayedCompanies = filteredCompanies.Skip(param.iDisplayStart).Take(param.iDisplayLength);
 			
-			// var result = from c in displayedCompanies select new[] { Convert.ToString(c.ID), c.Name, c.Address, c.Town };
-
 			string[][] returnRecords = displayedCompanies.Select(x => new string[] { Convert.ToString(x.ID), x.Name, x.Address, x.Town }).ToArray();
 			
 			return Json(new {
