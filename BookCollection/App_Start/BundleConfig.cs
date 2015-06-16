@@ -22,9 +22,9 @@ namespace BookCollection
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 				"~/Content/bootstrap.css",
 				"~/Content/style.css",
+				"~/Content/dataTables/demo_page.css",
 				"~/Content/dataTables/demo_table.css"
 			));
-
 		}
 	}
 }
